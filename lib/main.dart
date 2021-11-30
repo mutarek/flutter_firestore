@@ -21,7 +21,7 @@ class _State extends State<MyApp> {
 
   Future fetchAllData() async {
     final firestoreInstance = FirebaseFirestore.instance;
-    firestoreInstance.collection("users").get().then((querySnapshot) {
+    firestoreInstance.collection("Countries").get().then((querySnapshot) {
       querySnapshot.docs.forEach((result) {
         print(result.data());
       });
