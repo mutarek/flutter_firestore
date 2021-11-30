@@ -13,15 +13,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _State extends State<MyApp> {
-  Future fetchData() async {
-    final db = FirebaseFirestore.instance;
-    db.collection("Countries").get().then((querySnapshot) {
-      querySnapshot.docs.forEach((result) {
-        print(result.data());
-      });
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
