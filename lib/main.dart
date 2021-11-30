@@ -19,20 +19,6 @@ class _State extends State<MyApp> {
       appBar: AppBar(
         title: Text('DB'),
       ),
-      body: FutureBuilder(
-        future: fetchData(),
-        builder: (context, AsyncSnapshot snapshot) {
-          return ListView.builder(
-            itemCount: snapshot.data.length,
-            itemBuilder: (ctx, index) {
-              DocumentSnapshot data = snapshot.data[index];
-              return ListTile(
-                title: Text(data['name']),
-              );
-            },
-          );
-        },
-      ),
     );
   }
 }
